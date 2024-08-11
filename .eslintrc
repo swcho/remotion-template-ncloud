@@ -1,6 +1,16 @@
 {
-	"extends": "@remotion",
+	"extends": ["@remotion", "plugin:prettier/recommended"],
 	"env": {
 		"node": true
+	},
+	"rules": {
+		"capitalized-comments": "off",
+		"@typescript-eslint/no-unused-vars": "warn",
+		"no-empty-pattern": "warn",
+		"@typescript-eslint/ban-types": "warn",
+		"@typescript-eslint/no-namespace": "off",
+		"no-redeclare": "off",
+		"prettier/prettier": "warn",
+		"react/no-unused-prop-types": "warn"
 	}
 }

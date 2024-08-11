@@ -1,0 +1,11 @@
+: 1723356881:0;git remote add origin git@github.com:swcho/remotion-template-ncloud.git\
+git branch -M main\
+git push -u origin main
+: 1723357103:0;npm install md5
+: 1723357130:0;npm install -D @types/md5
+: 1723357463:0;npm install express
+: 1723357472:0;npm install -D @types/express
+: 1723357808:0;npm install @aws-sdk/client-s3
+: 1723358299:0;npm install -D ts-node-dev
+: 1723358342:0;npm install dotenv
+: 1723358396:0;npm run ncloud-proxy
