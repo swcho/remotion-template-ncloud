@@ -96,6 +96,7 @@ app.get('/api/put', async (req, res) => {
 				body: `speaker=${voice}&text=${text}&volume=0&speed=0&pitch=0&format=mp3`,
 			},
 		);
+		console.log('tts success')
 		const resp = await s3.send(
 			new PutObjectCommand({
 				Bucket: env.NCP_OBJECT_STORAGE_BUCKET_NAME,
@@ -103,6 +104,7 @@ app.get('/api/put', async (req, res) => {
 				Body: new Uint8Array(await fetchResponse.arrayBuffer()),
 			}),
 		);
+		console.log('put success')
 		res.header('Access-Control-Allow-Origin', '*');
 		res.json(resp);
 	} catch (e) {

@@ -4,6 +4,7 @@
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 	"css.lint.unknownAtRules": "ignore",
 	"cSpell.words": [
+		"NAVER",
 		"ncloud"
 	]
 }

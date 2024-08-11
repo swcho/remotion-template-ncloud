@@ -11,3 +11,8 @@ git push -u origin main
 : 1723358396:0;npm run ncloud-proxy
 : 1723358645:0;npm install -D concurrently
 : 1723358689:0;npm run start
+: 1723358844:0;npm install query-string
+: 1723358944:0;npm install @remotion/media-utils
+: 1723359416:0;npm install lodash-es
+: 1723359425:0;npm install -D @types/lodash-es
+: 1723359655:0;npm run start
