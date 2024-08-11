@@ -1,12 +1,12 @@
 import {Composition} from 'remotion';
-import {MyComposition, myCompSchema} from './Composition';
+import {MyComposition, myCompSchema} from './sample/Composition';
 import './style.css';
 
 export const RemotionRoot: React.FC = () => {
 	return (
 		<>
 			<Composition
-				id="MyComp"
+				id="sample"
 				component={MyComposition}
 				durationInFrames={240}
 				fps={30}

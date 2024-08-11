@@ -9,3 +9,5 @@ git push -u origin main
 : 1723358299:0;npm install -D ts-node-dev
 : 1723358342:0;npm install dotenv
 : 1723358396:0;npm run ncloud-proxy
+: 1723358645:0;npm install -D concurrently
+: 1723358689:0;npm run start
