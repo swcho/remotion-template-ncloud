@@ -27,3 +27,6 @@ git push -u origin main
 : 1726817635:0;npm i
 : 1726817658:0;npm run start
 : 1726817873:0;npm i @remotion/bundler
+: 1726818394:0;npm run start
+: 1726818466:0;npm i gsap-trial
+: 1726818472:0;npm run start

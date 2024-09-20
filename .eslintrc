@@ -48,6 +48,11 @@
 						"pattern": "{remotion,@remotion/**}",
 						"group": "external",
 						"position": "after"
+					},
+					{
+						"pattern": "@/**",
+						"group": "external",
+						"position": "after"
 					}
 				],
 				"pathGroupsExcludedImportTypes": [],

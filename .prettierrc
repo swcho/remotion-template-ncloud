@@ -1,7 +1,7 @@
 {
 	"singleQuote": true,
 	"bracketSpacing": false,
-	"useTabs": true,
+	"useTabs": false,
 	"overrides": [
 		{
 			"files": ["*.yml"],

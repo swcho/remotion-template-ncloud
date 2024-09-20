@@ -1,4 +1,4 @@
 export type TtsParams = {
-	text: string;
-	voice: string;
+  text: string;
+  voice: string;
 };
