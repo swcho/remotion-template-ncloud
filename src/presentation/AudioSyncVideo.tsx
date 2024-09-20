@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import {Img, OffthreadVideo, Sequence} from 'remotion';
 
+import {cn} from '../utils/tailwind-utils';
+
 import {usePresentationContext} from './RootPresentationComposition';
 
 export type Props = {
@@ -15,7 +17,7 @@ function AudioSyncVideo(props: Props) {
 
   const {audioFrom} = usePresentationContext();
   return (
-    <div className={className || 'h-full w-full relative'}>
+    <div className={cn('h-full w-full relative', className)}>
       {placeholder ? (
         <Img
           className="absolute h-full w-full object-contain"

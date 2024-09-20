@@ -1,6 +1,6 @@
 /* eslint-disable @remotion/warn-native-media-tag */
-import {PresentationConfig} from '@/presentation/presentation-utils';
 
+import {PresentationConfig} from '../../presentation/presentation-utils';
 import TitleContent from '../layout/TitleContent';
 import {makeChanterIntro} from '../layout/layout-utils';
 

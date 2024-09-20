@@ -11,11 +11,6 @@
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
 		"noUnusedLocals": true,
-		"jsxImportSource": "@emotion/react",
-		"paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
+		"jsxImportSource": "@emotion/react"
 	}
 }
