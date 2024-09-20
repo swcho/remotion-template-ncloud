@@ -1,5 +1,12 @@
 {
-	"extends": ["@remotion", "plugin:prettier/recommended"],
+	"plugins": [
+		"import"
+	],
+	"extends": [
+		"@remotion",
+		"plugin:prettier/recommended",
+		"plugin:import/recommended"
+	],
 	"env": {
 		"node": true
 	},
@@ -11,6 +18,46 @@
 		"@typescript-eslint/no-namespace": "off",
 		"no-redeclare": "off",
 		"prettier/prettier": "warn",
-		"react/no-unused-prop-types": "warn"
+		"react/no-unused-prop-types": "warn",
+		"import/no-unresolved": "off",
+		"import/order": [
+			"warn",
+			{
+				"groups": [
+					"builtin",
+					"external",
+					"index",
+					"parent",
+					"sibling",
+					"internal",
+					"object",
+					"type"
+				],
+				"pathGroups": [
+					{
+            "pattern": "@emotion/react",
+            "group": "builtin",
+            "position": "before"
+          },
+					{
+            "pattern": "react*",
+            "group": "external",
+            "position": "before"
+          },
+					{
+						"pattern": "{remotion,@remotion/**}",
+						"group": "external",
+						"position": "after"
+					}
+				],
+				"pathGroupsExcludedImportTypes": [],
+				"distinctGroup": true,
+				"newlines-between": "always",
+				"alphabetize": {
+					"order": "asc"
+				}
+			}
+		],
+		"camelcase": "off"
 	}
 }

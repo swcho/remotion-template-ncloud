@@ -1,13 +1,14 @@
 import {Composition} from 'remotion';
-import {MyComposition, myCompSchema} from './sample/Composition';
+
 import './style.css';
-import { makeRootTtsComposition } from './tts/RootTtsComposition';
-import { intro } from './tts-sample/intro';
+import {makeRootPresentationComposition} from './presentation/RootPresentationComposition';
+import {MyComposition, myCompSchema} from './sample/Composition';
+import {intro} from './tts-sample/intro';
 
 export const RemotionRoot: React.FC = () => {
 	return (
 		<>
-			{makeRootTtsComposition('intro', intro)}
+			{makeRootPresentationComposition('intro', intro)}
 			<Composition
 				id="sample"
 				component={MyComposition}

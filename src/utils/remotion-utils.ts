@@ -1,4 +1,4 @@
-import { getRemotionEnvironment } from "remotion";
+import {getRemotionEnvironment} from 'remotion';
 
 export function waitForNoInput(signal: AbortSignal, ms: number) {
 	// Don't wait during rendering

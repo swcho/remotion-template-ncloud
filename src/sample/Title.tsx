@@ -1,6 +1,6 @@
-import {interpolate} from 'remotion';
-import {useCurrentFrame} from 'remotion';
 import React from 'react';
+
+import {interpolate, useCurrentFrame} from 'remotion';
 
 export const Title: React.FC<{
 	titleText: string;

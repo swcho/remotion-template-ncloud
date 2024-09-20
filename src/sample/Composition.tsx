@@ -1,9 +1,11 @@
+import {z} from 'zod';
+
+import {zColor} from '@remotion/zod-types';
 import {AbsoluteFill} from 'remotion';
+
 import {Logo} from './Logo';
 import {Subtitle} from './Subtitle';
 import {Title} from './Title';
-import {z} from 'zod';
-import {zColor} from '@remotion/zod-types';
 
 export const myCompSchema = z.object({
 	titleText: z.string(),

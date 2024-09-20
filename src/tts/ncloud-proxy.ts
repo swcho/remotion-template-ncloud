@@ -1,6 +1,8 @@
-import { getAudioDurationInSeconds } from "@remotion/media-utils";
-import { TtsParams } from "../config";
 import queryString from 'query-string';
+
+import {getAudioDurationInSeconds} from '@remotion/media-utils';
+
+import {TtsParams} from '../config';
 
 const API_ENDPOINT = 'http://localhost:3001/api';
 
@@ -20,6 +22,7 @@ async function uploadFile(tts: TtsParams) {
 
 export async function getAudioInfo(ttsParams: TtsParams) {
 	const exists = await s3Exists(ttsParams);
+
 	// console.log({exists});
 	if (!exists) {
 		await uploadFile(ttsParams);

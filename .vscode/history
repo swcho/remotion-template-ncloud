@@ -16,3 +16,14 @@ git push -u origin main
 : 1723359416:0;npm install lodash-es
 : 1723359425:0;npm install -D @types/lodash-es
 : 1723359655:0;npm run start
+: 1726816522:0;npm i gsap
+: 1726816632:0;npm i -D @types/react-dom
+: 1726816753:0;npm i @remotion/transitions
+: 1726816924:0;npm run start
+: 1726816964:0;npx remotion versions --log=verbose
+: 1726817019:0;npx remotion upgrade
+: 1726817050:0;npx remotion versions
+: 1726817057:0;npm run start
+: 1726817635:0;npm i
+: 1726817658:0;npm run start
+: 1726817873:0;npm i @remotion/bundler

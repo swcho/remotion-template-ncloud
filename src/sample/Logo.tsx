@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
 export const Logo: React.FC<{
