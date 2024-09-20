@@ -30,3 +30,5 @@ git push -u origin main
 : 1726818394:0;npm run start
 : 1726818466:0;npm i gsap-trial
 : 1726818472:0;npm run start
+: 1726821089:0;npm i @emotion/react
+: 1726821278:0;npm run start

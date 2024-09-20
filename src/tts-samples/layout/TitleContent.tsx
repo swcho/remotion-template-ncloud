@@ -1,3 +1,10 @@
+/** @jsx jsx  */
+/** @jsxFrag */
+/* eslint-disable @remotion/warn-native-media-tag */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import {jsx} from '@emotion/react';
+
 import * as React from 'react';
 
 import {AbsoluteFill} from 'remotion';
@@ -15,6 +22,10 @@ function TitleContent(props: Props) {
         gridTemplateColumns: 'repeat(12, 1fr)',
         gridTemplateRows: 'repeat(8, 1fr)',
         gap: '8px',
+      }}
+      css={{
+        /* made at https://learnui.design/tools/gradient-generator.html */
+        background: `radial-gradient(circle at 100% 0%, #a0d9f2, #8dded2, #9ddda7, #c0d57f, #e3c978, #fcbb9e, #ffb0d2, #f7b0ff)`,
       }}
       className="bg-gray-100 p-5 pb-12"
     >
