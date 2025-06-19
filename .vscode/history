@@ -34,3 +34,5 @@ git push -u origin main
 : 1726821278:0;npm run start
 : 1726822674:0;npm i clsx tailwind-merge
 : 1726822737:0;npm run start
+: 1726823355:0;npm i react-inlinesvg
+: 1726826218:0;npm run start

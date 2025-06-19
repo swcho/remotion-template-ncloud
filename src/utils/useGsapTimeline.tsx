@@ -1,5 +1,11 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import {createContext, useContext, useEffect, useRef} from 'react';
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+} from 'react';
 
 import {gsap} from 'gsap';
 
@@ -27,13 +33,16 @@ export function GsapHookContextProvider(props: GsapHookContextProvider.Props) {
 }
 
 export function useGsapTimeline<T>(
+  from: number,
   gsapTimelineFactory: () => gsap.core.Timeline,
   deps: React.DependencyList = [],
-) {
+): React.RefObject<T> {
   const {callback} = useContext(GsapHookContext);
   if (callback) {
     const gsap = gsapTimelineFactory();
     callback(gsap);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     return;
   }
   const animationScopeRef = useRef<T>(null);
@@ -42,19 +51,23 @@ export function useGsapTimeline<T>(
   const {fps} = useVideoConfig();
 
   useEffect(() => {
+    const scope = animationScopeRef.current!;
+    console.log('useGsapTimeline.gsapTimelineFactory', {from}, scope);
     const ctx = gsap.context(() => {
-      timelineRef.current = gsapTimelineFactory();
-      timelineRef.current.pause();
-    }, animationScopeRef.current!);
+      if (scope) {
+        timelineRef.current = gsapTimelineFactory();
+        timelineRef.current.pause();
+      }
+    }, scope);
     return () => ctx.revert();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [animationScopeRef.current, ...deps]);
 
   useEffect(() => {
     if (timelineRef.current) {
-      timelineRef.current.seek(frame / fps);
+      timelineRef.current.seek((frame - from) / fps);
     }
-  }, [frame, fps]);
+  }, [frame, fps, from]);
 
   return animationScopeRef;
 }

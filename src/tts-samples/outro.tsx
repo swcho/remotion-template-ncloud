@@ -9,11 +9,11 @@ import {AbsoluteFill} from 'remotion';
 
 import {PresentationConfig} from '../presentation/presentation-utils';
 
-export const intro: PresentationConfig[] = [
+export const outro: PresentationConfig[] = [
   {
     duration: {
-      caption:
-        '안녕하세요. NAVER Cloud Platform을 활용한 Remotion TTS 예제를 소개합니다.',
+      caption: `지금까지 Clova Voice를 활용한 remotion tts 템플릿을 소개드렸습니다.
+				시청해 주셔서 감사합니다.`,
     },
     Component: () => (
       <AbsoluteFill
@@ -23,7 +23,7 @@ export const intro: PresentationConfig[] = [
           background: `radial-gradient(circle at 100% 0%, #a0d9f2, #8dded2, #9ddda7, #c0d57f, #e3c978, #fcbb9e, #ffb0d2, #f7b0ff)`,
         }}
       >
-        <div className="text-6xl">Remotion with NAVER Cloud Platform</div>
+        <div className="text-6xl">감사합니다.</div>
       </AbsoluteFill>
     ),
   },

@@ -55,7 +55,7 @@ const RootPresentationComposition: React.FC<
           (audioInfo?.audioDelayInFrames || 0);
         // console.log(`${index}`, Component);
         return (
-          <>
+          <React.Fragment key={index}>
             {index > 0 && (
               <TransitionSeries.Transition
                 presentation={fade()}
@@ -67,7 +67,6 @@ const RootPresentationComposition: React.FC<
             <TransitionSeries.Sequence
               key={index}
               className={`presentation-${index}`}
-              // from={from}
               durationInFrames={durationInFrames}
             >
               <ContextPresentation.Provider value={{props, audioFrom}}>
@@ -87,7 +86,7 @@ const RootPresentationComposition: React.FC<
                 </Sequence>
               )}
             </TransitionSeries.Sequence>
-          </>
+          </React.Fragment>
         );
       })}
     </TransitionSeries>
@@ -99,7 +98,7 @@ export function makeRootPresentationComposition(
   presentations: PresentationConfig[],
   options: Partial<PresentationOptions> = {},
 ) {
-  const {fps = 30, audioDelay = 0.8, transitionDuration = 1} = options;
+  const {fps = 30, audioDelay = 0.3, transitionDuration = 0.3} = options;
   return (
     <Context.Provider value={{presentations}}>
       <Composition

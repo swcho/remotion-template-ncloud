@@ -18,6 +18,7 @@ export type DurationConfig =
 export type PresentationProps = {
   index: number;
   transitionPaddingFrames: number;
+  from: number;
   durationInFrames: number;
   durationConfig: DurationConfig;
 
@@ -50,6 +51,7 @@ export async function getPresentationPropList(
   const {fps, transitionDuration} = options;
   const ret: PresentationProps[] = [];
   let index = 0;
+  let from = 0;
   const transitionPaddingFrames = secondsToFrames(fps, transitionDuration);
   for (const presentation of presentations) {
     const durationInfo = await getPresentationDuration(presentation, options);
@@ -63,12 +65,15 @@ export async function getPresentationPropList(
     ret.push({
       durationConfig,
       transitionPaddingFrames,
+      from,
       durationInFrames,
       index,
       ...durationInfo,
     });
     index += 1;
+    from += durationInFrames - transitionPaddingFrames;
   }
+  // console.log({ret});
   return ret;
 }
 

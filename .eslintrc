@@ -63,6 +63,7 @@
 				}
 			}
 		],
-		"camelcase": "off"
+		"camelcase": "off",
+		"no-console": "warn"
 	}
 }

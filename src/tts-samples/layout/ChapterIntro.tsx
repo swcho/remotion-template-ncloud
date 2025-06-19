@@ -22,13 +22,13 @@ export type Props = {
 
 gsap.registerPlugin(SplitText);
 
-export const CHAPTER_INTRO_DURATION = 4;
+export const CHAPTER_INTRO_DURATION = 2;
 
 function ChapterIntro(props: Props) {
   const {title} = props;
 
   const {fps} = useVideoConfig();
-  const ref = useGsapTimeline<HTMLDivElement>(() => {
+  const ref = useGsapTimeline<HTMLDivElement>(0, () => {
     const split = new SplitText('#title', {
       type: 'chars',
       reduceWhiteSpace: false,

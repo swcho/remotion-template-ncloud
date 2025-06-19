@@ -11,12 +11,14 @@ import {AbsoluteFill} from 'remotion';
 
 export type Props = React.PropsWithChildren & {
   title: React.ReactNode;
+  innerRef?: React.RefObject<HTMLDivElement>;
 };
 
 function TitleContent(props: Props) {
-  const {title, children} = props;
+  const {title, innerRef, children} = props;
   return (
     <AbsoluteFill
+      ref={innerRef}
       style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(12, 1fr)',
